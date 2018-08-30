@@ -189,16 +189,16 @@ ns_5 = ns_N5(N, n_4)
 r_6 = f_r6(N, n_5) #Random Potential 
 ns_6 = ns_N6(N, n_5)
 
-plot(ns, r, color= 'red', label = 'φ^2/3') 
-plot(ns_1, r_1, color= 'purple', label = 'R^2 Inflation')
-plot(ns_2, r_2, color= 'brown', label = 'Massive Potential')
-plot(ns_3, r_3, color= 'black', label = 'φ^4/3')
-plot(ns_4, r_4, color= 'blue', label = 'φ^3')
+plot(ns, r, color= 'red', label = '$φ^{2/3}$')
 plot(ns_5, r_5, color= 'green', label = 'φ')
-plot(ns_6, r_6, color= 'pink', label ='φ^1.125')
+plot(ns_6, r_6, color= 'pink', label ='$φ^{1.125}$')
+plot(ns_3, r_3, color= 'black', label = '$φ^{4/3}$')
+plot(ns_2, r_2, color= 'brown', label = '$φ^2$')
+plot(ns_4, r_4, color= 'blue', label = '$φ^3$')
+plot(ns_1, r_1, color= 'purple', label = '$R^2$ Inflation')
 
 ###################################
-alist = np.linspace(0.01, 1000, 500) 
+alist = np.linspace(0.01, 3500, 500) 
 f_r_store_1  = []       
 f_ns_store_1 = [] 
 
@@ -228,7 +228,8 @@ for i in range(len(alist)) :
     plot(f_ns_store_1, f_r_store_1, color = 'orange')  
 
     f_r_store_1=[]
-    f_ns_store_1=[] 
-
+    f_ns_store_1=[]
+    
+plt.axhline(y=0.07, color='brown')
 plt.legend()
 G.export()
